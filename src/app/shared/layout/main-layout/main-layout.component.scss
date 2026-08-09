@@ -1,0 +1,9 @@
+:host {
+    --navbar-height: 72px;
+    display: block;
+
+}
+
+main {
+    padding-top: var(--navbar-height);
+}

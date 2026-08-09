@@ -1,0 +1,262 @@
+.experience-page {
+  min-height: calc(100vh - 80px);
+  padding: 60px 8%;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.experience-page__intro {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.experience-page__eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #2563eb;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+}
+
+.experience-page__intro h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+
+.experience-page__intro p {
+  max-width: 720px;
+  color: #475569;
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+.experience-page__card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 28px;
+  padding: 28px 26px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.experience-page__card-title {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.experience-page__card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.experience-page__pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.experience-page__pill-row span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.experience-page__layout {
+  display: grid;
+  grid-template-columns: 1.6fr 0.95fr;
+  gap: 32px;
+}
+
+.experience-page__header {
+  margin-bottom: 28px;
+}
+
+.experience-page__header h2 {
+  font-size: 1.75rem;
+  margin-bottom: 14px;
+}
+
+.experience-page__header p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.experience-page__items {
+  display: grid;
+  gap: 26px;
+}
+
+.experience-page__item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.experience-page__item-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.experience-page__company {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.experience-page__role {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.experience-page__meta {
+  color: #64748b;
+  font-size: 0.95rem;
+  min-width: 200px;
+  text-align: right;
+}
+
+.experience-page__item-description {
+  margin: 0 0 20px;
+  color: #475569;
+  line-height: 1.85;
+}
+
+.experience-page__item-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.experience-page__item-list li {
+  position: relative;
+  padding-left: 20px;
+  color: #334155;
+  line-height: 1.75;
+}
+
+.experience-page__item-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: #2563eb;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.experience-page__sidebar {
+  display: grid;
+  gap: 24px;
+}
+
+.experience-page__panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
+  position: sticky;
+  top: 110px;
+}
+
+.experience-page__panel h3 {
+  margin: 0 0 18px;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.experience-page__panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.experience-page__panel li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #475569;
+  line-height: 1.75;
+}
+
+.experience-page__panel li::before {
+  content: '\2022';
+  color: #2563eb;
+  margin-top: 4px;
+}
+
+@media (max-width: 1100px) {
+  .experience-page__intro,
+  .experience-page__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-page__meta {
+    text-align: left;
+    min-width: auto;
+  }
+
+  .experience-page__card {
+    padding: 24px;
+  }
+
+  .experience-page__sidebar {
+    order: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .experience-page {
+    padding: 40px 6%;
+  }
+
+  .experience-page__item {
+    padding: 24px;
+  }
+
+  .experience-page__item-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .experience-page__panel {
+    position: static;
+    top: auto;
+  }
+}

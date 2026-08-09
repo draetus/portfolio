@@ -2,16 +2,33 @@
     <div class="navbar-container">
 
         <a class="logo" routerLink="/">
-            Mauricio Macário de Farias Jr.
+            Maurício Macário de Farias Jr.
         </a>
 
-        <div class="nav-links">
+        <button
+            #menuToggle
+            class="menu-toggle"
+            type="button"
+            [attr.aria-label]="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
+            [attr.aria-expanded]="isMenuOpen"
+            (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div
+            #menuContainer
+            class="nav-links"
+            id="mobile-navigation"
+            [class.mobile-open]="isMenuOpen">
 
             @for (item of menuItems; track item.route) {
                 <a
                     [routerLink]="item.route"
                     routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: item.route === '/' }">
+                    [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+                    (click)="closeMenu()">
                     {{ item.label }}
                 </a>
             }
@@ -19,7 +36,8 @@
             <a
                 class="cv-button"
                 href="resume/resume.pdf"
-                download="Mauricio-Macario-Resume.pdf">
+                download="Mauricio-Macario-Resume.pdf"
+                (click)="closeMenu()">
                 Download CV
                 <span>↓</span>
             </a>
@@ -27,4 +45,8 @@
         </div>
 
     </div>
+
+    @if (isMenuOpen) {
+        <div class="mobile-backdrop" (click)="closeMenu()" aria-hidden="true"></div>
+    }
 </nav>

@@ -1,1 +1,54 @@
-<p>skills works!</p>
+<section class="skills-page">
+  <div class="skills-page__intro">
+    <div>
+      <span class="skills-page__eyebrow">Skills</span>
+      <h1>Technical strengths for backend engineering and remote delivery</h1>
+      <p>
+        A carefully organized skill set built for international roles and recruiter review.
+        This page highlights the most relevant technologies and capabilities for backend, cloud and high-performance systems.
+      </p>
+    </div>
+
+    <aside class="skills-page__summary-card">
+      <p class="skills-page__summary-title">Recruiter-ready coverage</p>
+      <ul class="skills-page__summary-list">
+        <li>Backend-first profile with strong Java + Spring Boot expertise</li>
+        <li>Structured architecture and migration patterns for scalable systems</li>
+        <li>Resilience practices like retry, circuit breaker and disaster recovery</li>
+        <li>API documentation with Swagger / OpenAPI and clear operations culture</li>
+        <li>Remote-friendly collaboration, DevOps and Zero Trust mindset</li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="skills-page__grid">
+    <div class="skills-page__cards">
+      <article class="skills-card" *ngFor="let category of skillCategories">
+        <header>
+          <p class="skills-card__title">{{ category.title }}</p>
+          <p class="skills-card__summary">{{ category.summary }}</p>
+        </header>
+
+        <div class="skills-card__keywords">
+          <span *ngFor="let keyword of category.keywords">{{ keyword }}</span>
+        </div>
+      </article>
+    </div>
+
+    <aside class="skills-page__panel">
+      <div class="skills-panel">
+        <h2>Why this matters</h2>
+        <p>
+          Recruiters looking for strong backend talent will quickly see the skills organized by architecture, resilience and delivery.
+          The page is built to be compact, easy to scan and focused on enterprise-grade system design.
+        </p>
+        <ul>
+          <li>Fast review for hiring managers and technical leads</li>
+          <li>Clear focus on architecture, resilience and API documentation</li>
+          <li>Modern delivery culture with DevOps, remote collaboration and Zero Trust</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+

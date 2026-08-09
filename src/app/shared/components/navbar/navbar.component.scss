@@ -3,17 +3,22 @@
 }
 
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+
     z-index: 1000;
 
     backdrop-filter: blur(14px);
-    background: rgba(15, 23, 42, 0.75);
+    -webkit-backdrop-filter: blur(14px);
 
+    background: rgba(15, 23, 42, 0.75);
     border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .navbar-container {
+    position: relative;
     max-width: 1300px;
     height: 72px;
 
@@ -146,6 +151,39 @@
     transform: translateY(3px);
 }
 
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 44px;
+    height: 44px;
+
+    border: 0;
+    border-radius: 999px;
+
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background: white;
+    transition: transform .25s ease, opacity .25s ease;
+}
+
+.mobile-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(2, 6, 23, 0.45);
+}
+
 
 /* ==========================
    MOBILE
@@ -154,27 +192,54 @@
 @media (max-width: 768px) {
 
     .navbar-container {
-        flex-direction: column;
-
-        height: auto;
-
-        padding: 18px;
+        height: 72px;
+        padding: 0 20px;
     }
 
     .logo {
-        margin-bottom: 18px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
 
-        text-align: center;
+    .menu-toggle {
+        display: inline-flex;
+        z-index: 1101;
     }
 
     .nav-links {
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(82vw, 320px);
+        height: 100vh;
+        padding: 88px 24px 24px;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 18px;
+        background: rgba(15, 23, 42, 0.97);
+        box-shadow: -12px 0 30px rgba(0, 0, 0, 0.35);
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
+        z-index: 1100;
+    }
+
+    .nav-links.mobile-open {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .nav-links a {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .nav-links a:not(.cv-button)::after {
+        display: none;
     }
 
     .cv-button {

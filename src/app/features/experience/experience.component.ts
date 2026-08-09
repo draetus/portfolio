@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ExperienceItem } from '../../core/models/experience.model';
+import { ExperienceService } from '../../core/services/experience.service';
 
 @Component({
   selector: 'app-experience',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss'
+  styleUrls: ['./experience.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperienceComponent {
 
+  readonly experienceItems: ExperienceItem[];
+
+  constructor(experienceService: ExperienceService) {
+    this.experienceItems = experienceService.getExperiences();
+  }
 }
