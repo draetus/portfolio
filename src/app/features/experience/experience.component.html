@@ -2,17 +2,18 @@
   <div class="experience-page__intro">
     <div>
       <span class="experience-page__eyebrow">Experience</span>
-      <h1>Backend engineering and leadership for modern remote teams</h1>
+      <h1>5+ years of hands-on backend engineering for remote teams</h1>
       <p>
-        Experienced Java backend engineer with a strong delivery record in Spring Boot, microservices and AWS.
-        This page highlights measurable achievements, team leadership and backend architecture work built for high-traffic systems.
+        Java backend engineer with a consistent record of shipping and owning production systems — from a first
+        mobile app backend to a large-scale insurance platform. This page covers the two companies where that
+        experience was built, and how my responsibilities grew along the way.
       </p>
     </div>
 
     <aside class="experience-page__card">
       <p class="experience-page__card-title">International-ready profile</p>
       <ul class="experience-page__card-list">
-        <li>5+ years in backend engineering and distributed systems</li>
+        <li>7+ years of backend engineering experience</li>
         <li>Open to remote opportunities and international recruitment</li>
         <li>Focus on scalable Java, Spring Boot and cloud-native solutions</li>
         <li>Strong communication aligned with recruiter expectations</li>
@@ -30,9 +31,9 @@
   <div class="experience-page__layout">
     <div class="experience-page__timeline">
       <div class="experience-page__header">
-        <h2>Professional timeline</h2>
+        <h2>Companies</h2>
         <p>
-          Roles are organized to make recruiter review fast and clear. Each item highlights the company, role, location and measurable delivery results.
+          Organized to make recruiter review fast and clear. Each entry highlights the company, role, location and measurable delivery results.
         </p>
       </div>
 
@@ -48,6 +49,10 @@
 
           <p class="experience-page__item-description">{{ item.description }}</p>
 
+          <div class="experience-page__progression" *ngIf="item.progression">
+            <span *ngFor="let step of item.progression">{{ step }}</span>
+          </div>
+
           <ul class="experience-page__item-list">
             <li *ngFor="let highlight of item.highlights">{{ highlight }}</li>
           </ul>
@@ -59,10 +64,10 @@
       <div class="experience-page__panel">
         <h3>Key achievements</h3>
         <ul>
-          <li>Led a backend team of 6 engineers, defining architecture and delivery consistency.</li>
+          <li>Delivered production backend systems across 7 projects in 7+ years, from mobile apps to enterprise insurance platforms.</li>
           <li>Supported systems handling 50k+ daily requests across distributed services.</li>
           <li>Reduced recurring incidents by 30–40% through reliable production troubleshooting.</li>
-          <li>Improved API integration efficiency and reduced bottlenecks by 15–20%.</li>
+          <li>Co-founded and still help maintain a platform running 1,000+ connected devices in production.</li>
         </ul>
       </div>
 
@@ -70,11 +75,10 @@
         <h3>Recruiter-friendly summary</h3>
         <ul>
           <li>Java & Spring Boot expert with strong AWS and backend architecture experience.</li>
-          <li>Remote and international hiring ready, with clear communication and delivery focus.</li>
-          <li>Hands-on leadership, mentoring and Agile delivery in fast-moving teams.</li>
+          <li>Remote and international hiring ready, with clear, async-friendly communication.</li>
+          <li>Hands-on backend developer across mobile, enterprise and legacy systems, comfortable owning a service end-to-end.</li>
         </ul>
       </div>
     </aside>
   </div>
 </section>
-

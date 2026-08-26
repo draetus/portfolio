@@ -9,55 +9,28 @@ export class ExperienceService {
   private readonly experienceItems: ExperienceItem[] = [
     {
       company: 'PalmSoft Tecnologia',
-      role: 'Technical Lead | Backend Engineer',
+      role: 'Backend Developer',
       location: 'Remote, Brazil',
-      period: 'Sep 2022 — Present',
-      description: 'Leading backend architecture, delivery and mentoring for Java microservices used in payments, logistics and customer portals.',
+      period: 'Mar 2019 — Present',
+      description: 'Backend developer across five different products, taking on progressively more ownership of architecture, integrations and delivery over time — while staying hands-on with code throughout.',
+      progression: ['Junior Developer', 'Mid-Level Developer', 'Senior Developer', 'Tech Lead', 'Tech Lead & Partner'],
       highlights: [
-        'Led a 6-engineer backend team, defining architecture, technical direction and delivery consistency.',
-        'Delivered scalable Java + Spring Boot microservices in AWS using Docker and CI/CD pipelines.',
-        'Partnered directly with clients to turn business requirements into resilient backend solutions.',
-        'Improved team efficiency through code reviews, mentoring and architecture guidance.',
-        'Built integrations with internal and third-party systems using SQL and NoSQL databases.'
+        'Delivered backend services for 5 production systems: a mobile community app, a sales and reporting platform, a 6-vertical modular platform, a hospitality access-control system, and a physical access-control platform I co-founded.',
+        'Built 20+ third-party integrations across payment gateways, smart locks, facial recognition, hospital systems and hotel PMS platforms.',
+        'Designed microservices architectures for high-volume asynchronous processing (batch jobs, retries, per-vendor fallback policies) across two access-control platforms.',
+        'Responsibilities grew organically with the projects — my day-to-day focus has stayed on backend architecture and hands-on development.'
       ]
     },
     {
       company: 'SulAmérica',
-      role: 'Java Backend Engineer',
+      role: 'Backend Developer',
       location: 'Remote, Brazil',
       period: 'Aug 2021 — Present',
-      description: 'Contributing to high-performance backend services and the migration of critical modules into a modern microservices architecture.',
+      description: 'Backend developer on ControlVP, SulAmérica\'s 15+ year core insurance and travel-insurance platform, plus Seguro Viagem REST, a satellite modernization project built alongside it.',
       highlights: [
-        'Developed and maintained Java Spring Boot services supporting 50k+ daily requests.',
-        'Designed REST APIs for internal and external systems, reducing integration bottlenecks by 15–20%.',
-        'Improved production stability by troubleshooting critical issues and reducing recurring incidents by 30–40%.',
-        'Built integrations across distributed systems with third-party and internal services.',
-        'Worked in Agile teams using Jira and Confluence to deliver iterative improvements.'
-      ]
-    },
-    {
-      company: 'Mid-Level Backend Developer',
-      role: 'Java Backend Engineer',
-      location: 'Remote, Brazil',
-      period: 'Aug 2021 — Aug 2022',
-      description: 'Delivered backend solutions across multiple business domains, focusing on service quality and scalable architecture.',
-      highlights: [
-        'Developed Java and Spring Boot services for rental, food, transport and marketplace systems.',
-        'Acted as the primary developer after the architecture phase, driving implementation and stability.',
-        'Adapted system architecture to evolving business requirements while preserving delivery pace.',
-        'Supported frontend integration using React, ensuring strong API contracts and efficient handoffs.'
-      ]
-    },
-    {
-      company: 'Junior Back-End Developer',
-      role: 'Java Backend Developer',
-      location: 'Remote, Brazil',
-      period: 'Mar 2019 — Aug 2021',
-      description: 'Built backend applications using Java and Spring Boot while improving delivery reliability with automation and testing.',
-      highlights: [
-        'Developed backend systems across multiple projects using Java, Spring Boot and relational databases.',
-        'Implemented CI/CD pipelines to improve deployment reliability and release confidence.',
-        'Contributed to React frontend work when required, strengthening backend-to-frontend integrations.'
+        'Work across policies, claims, billing and commissioning inside a large, highly regulated legacy Java codebase (Spring, Hibernate, JSF/PrimeFaces, REST/SOAP, Oracle, DB2).',
+        'Built a REST-to-SOAP translation layer and Kafka-based asynchronous flows for Seguro Viagem REST, a middleware modernizing access to the legacy travel-insurance services.',
+        'Contribute to technical decisions within a culture that encourages developers to speak up beyond the formal scope of the role.'
       ]
     }
   ];

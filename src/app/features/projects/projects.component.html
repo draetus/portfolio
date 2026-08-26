@@ -1,1 +1,116 @@
-<p>projects works!</p>
+<section class="projects-page">
+  <div class="projects-page__intro">
+    <div>
+      <span class="projects-page__eyebrow">Projects</span>
+      <h1>Seven years of hands-on backend development, from Junior Developer to co-founding a production platform</h1>
+      <p>
+        A chronological look at the systems I've built, from my first mobile backend to a physical
+        access-control platform I co-founded and a 15+ year-old insurance core I help evolve today.
+        Each project reflects the technical decisions and trade-offs behind it.
+      </p>
+    </div>
+
+    <aside class="projects-page__card">
+      <p class="projects-page__card-title">Career at a glance</p>
+      <ul class="projects-page__card-list">
+        <li>7 production systems shipped across 2 companies over 7+ years</li>
+        <li>Backend architecture ranging from mobile social apps to enterprise legacy platforms</li>
+        <li>Hands-on with microservices, monoliths, async processing and REST/SOAP integration</li>
+        <li>Co-founded and still help maintain a platform running 1,000+ connected devices in production</li>
+      </ul>
+      <div class="projects-page__pill-row">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Microservices</span>
+        <span>AWS</span>
+        <span>REST/SOAP</span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="projects-page__section">
+    <div class="projects-page__header">
+      <h2>Featured projects</h2>
+      <p>The two projects with the deepest end-to-end technical ownership in my career so far.</p>
+    </div>
+
+    <div class="projects-page__featured-grid">
+      <article class="project-card project-card--featured" *ngFor="let project of featuredProjects">
+        <span class="project-card__featured-tag">Featured</span>
+
+        <header class="project-card__header">
+          <div>
+            <p class="project-card__name">{{ project.name }}</p>
+            <p class="project-card__meta">{{ project.company }} · {{ project.role }}</p>
+          </div>
+        </header>
+
+        <p class="project-card__summary">{{ project.summary }}</p>
+
+        <ul class="project-card__highlights">
+          <li *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+        </ul>
+
+        <div class="project-card__stack">
+          <span *ngFor="let tech of project.stack">{{ tech }}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="projects-page__section">
+    <div class="projects-page__header">
+      <h2>PalmSoft Tecnologia</h2>
+      <p>Progression from Junior Developer to Senior Developer and Tech Lead, before co-founding Controle de Acesso.</p>
+    </div>
+
+    <div class="projects-page__grid">
+      <article class="project-card" *ngFor="let project of palmsoftProjects">
+        <header class="project-card__header">
+          <div>
+            <p class="project-card__name">{{ project.name }}</p>
+            <p class="project-card__meta">{{ project.company }} · {{ project.role }}</p>
+          </div>
+        </header>
+
+        <p class="project-card__summary">{{ project.summary }}</p>
+
+        <ul class="project-card__highlights">
+          <li *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+        </ul>
+
+        <div class="project-card__stack">
+          <span *ngFor="let tech of project.stack">{{ tech }}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="projects-page__section">
+    <div class="projects-page__header">
+      <h2>SulAmérica</h2>
+      <p>Backend engineering on a large, highly regulated insurance and travel-insurance platform.</p>
+    </div>
+
+    <div class="projects-page__grid">
+      <article class="project-card" *ngFor="let project of sulamericaProjects">
+        <header class="project-card__header">
+          <div>
+            <p class="project-card__name">{{ project.name }}</p>
+            <p class="project-card__meta">{{ project.company }} · {{ project.role }}</p>
+          </div>
+        </header>
+
+        <p class="project-card__summary">{{ project.summary }}</p>
+
+        <ul class="project-card__highlights">
+          <li *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+        </ul>
+
+        <div class="project-card__stack">
+          <span *ngFor="let tech of project.stack">{{ tech }}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

@@ -5,4 +5,5 @@ export interface ExperienceItem {
   period: string;
   description: string;
   highlights: string[];
+  progression?: string[];
 }

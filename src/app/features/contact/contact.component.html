@@ -1,1 +1,51 @@
-<p>contact works!</p>
+<section class="contact-page">
+  <div class="contact-page__intro">
+    <div>
+      <span class="contact-page__eyebrow">Contact</span>
+      <h1>Let's talk about your next backend hire</h1>
+      <p>
+        Open to remote and international opportunities as a Backend Engineer or FullStack Engineer.
+        Reach out directly through any of the channels below — I typically respond within a day.
+      </p>
+    </div>
+
+    <aside class="contact-page__card">
+      <p class="contact-page__card-title">Ready when you are</p>
+      <ul class="contact-page__card-list">
+        <li>Open to remote roles and international recruitment</li>
+        <li>5+ years in backend engineering across mobile, enterprise and legacy systems</li>
+        <li>Comfortable with async communication across time zones</li>
+      </ul>
+      <a class="contact-page__resume-button" href="resume/resume.pdf" download="Mauricio-Macario-Resume.pdf">
+        Download CV
+        <span>↓</span>
+      </a>
+    </aside>
+  </div>
+
+  <div class="contact-page__grid">
+    <article class="contact-card" *ngFor="let method of contactMethods">
+      <p class="contact-card__label">{{ method.label }}</p>
+      <p class="contact-card__value">{{ method.value }}</p>
+
+      <div class="contact-card__actions">
+        <a
+          class="contact-card__button"
+          [href]="method.href"
+          [attr.target]="method.external ? '_blank' : null"
+          [attr.rel]="method.external ? 'noopener noreferrer' : null">
+          {{ method.cta }}
+        </a>
+
+        <a
+          *ngIf="method.secondaryHref"
+          class="contact-card__button contact-card__button--outline"
+          [href]="method.secondaryHref"
+          target="_blank"
+          rel="noopener noreferrer">
+          {{ method.secondaryCta }}
+        </a>
+      </div>
+    </article>
+  </div>
+</section>

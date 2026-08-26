@@ -153,6 +153,26 @@
   line-height: 1.85;
 }
 
+.experience-page__progression {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 4px;
+  margin-bottom: 22px;
+}
+
+.experience-page__progression span {
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.experience-page__progression span:not(:last-child)::after {
+  content: '\2192';
+  margin-left: 8px;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
 .experience-page__item-list {
   margin: 0;
   padding: 0;

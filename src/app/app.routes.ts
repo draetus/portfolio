@@ -3,7 +3,6 @@ import { Routes } from '@angular/router';
 import { MainLayoutComponent } from './shared/layout/main-layout/main-layout.component';
 
 import { HomeComponent } from './features/home/home.component';
-import { AboutComponent } from './features/about/about.component';
 import { ExperienceComponent } from './features/experience/experience.component';
 import { ProjectsComponent } from './features/projects/projects.component';
 import { SkillsComponent } from './features/skills/skills.component';
@@ -21,10 +20,6 @@ export const routes: Routes = [
                 component: HomeComponent
             },
             {
-                path: 'about',
-                component: AboutComponent
-            },
-            {
                 path: 'experience',
                 component: ExperienceComponent
             },
@@ -39,11 +34,11 @@ export const routes: Routes = [
             {
                 path: 'contact',
                 component: ContactComponent
+            },
+            {
+                path: '**',
+                component: NotFoundComponent
             }
         ]
-    },
-    {
-        path: '**',
-        component: NotFoundComponent
     }
 ];
